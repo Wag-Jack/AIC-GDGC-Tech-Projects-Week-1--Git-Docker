@@ -1,13 +1,13 @@
 # Pull the Node.js base image from Docker Hub repository
 FROM node:24
 
-# Go to the app directory and set it as our working directory
-WORKDIR /app
+# Go to the src directory and set it as our working directory
+WORKDIR /src
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Install the app dependencies
+# Install the app dependencies (RUN happens during build time)
 RUN npm install
 
 # Copy the rest of the app's source code to the working directory
@@ -18,4 +18,4 @@ ENV PORT=3000
 EXPOSE 3000
 
 # Run our app
-CMD ["node", "app.js"]
+CMD ["node", "src/index.js"]
