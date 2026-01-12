@@ -121,4 +121,4 @@ You can now run your containers with:
 docker compose up
 ```
 
-Once again, look at Docker Desktop, and this time you'll see two containers running under "": "backend-1" and "db-1". Before closing the containers, head to http://localhost:3000/health to ensure that your database connection is running correctly.
+Once again, look at Docker Desktop, and this time you'll see two containers running under "aic-gdgc-tech-projects-week-1--git-docker": "backend" and "db". Before closing the containers, head to http://localhost:3000/health to ensure that your database connection is running correctly.
