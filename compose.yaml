@@ -3,6 +3,15 @@ services:
     build: .
     ports:
       - "3000:3000"
+    environment:
+      PORT: 3000
+      PGHOST: db
+      PGPORT: 5432
+      PGUSER: user
+      PGPASSWORD: password
+      PGDATABASE: mydatabase
+    depends_on:
+      - db
 
   db:
     image: postgres:17
