@@ -1,6 +1,7 @@
 const express = require('express');
 
 const app = express();
+const db = "imagine a database here";
 
 app.get('/', (req, res) => {
     res.send('Welcome to Tech Projects!');
